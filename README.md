@@ -13,7 +13,13 @@ Gestão de Categorias: Produtos podem ser associados a uma ou mais categorias.
 Controle de Status: Defina o status dos produtos como "Ativo", "Inativo", entre outros.
 Data de Criação: Acompanhe a data de criação dos produtos no sistema.
 Preço: Armazene informações de preço para cada produto.
-Como Usar
+
+
+
+
+
+
+Como Usar:
 Pré-requisitos
 Java 21 ou superior
 Banco de dados H2 (ou qualquer banco compatível com JPA/Hibernate)
@@ -44,7 +50,12 @@ Endpoints
 Se o sistema incluir APIs REST, forneça exemplos de endpoints:
 
 GET /produto/{categoria_id}/lista: Lista todos os produtos pela categoria.
+
+
+
 GET /produto: Lista todos os produtos 
+
+
 Exemplo de Request (para API REST)
 
 
