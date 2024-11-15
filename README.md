@@ -1,37 +1,52 @@
-Produto
-|-- ID
-|-- Nome
-|-- Descrição
-|-- Preço
-|-- Estoque
-|-- Data de Criação
-|-- Status
-|
-|   Categoria (1:N)
-|   Fornecedor (N:M)
-|   Avaliação (1:N)
-|
-Category
-|-- ID
-|-- Nome
-|-- Descrição
+# Modelo de Domínio de Produtos
 
-Supplier
-|-- ID
-|-- Nome
-|-- Contato
-|-- Endereço
+Este repositório contém o modelo de domínio de produtos, útil para sistemas de gerenciamento de produtos, inventário, ou catálogos. O diagrama abaixo representa as entidades e seus relacionamentos:
 
-Inventory
-|-- Produto
-|-- Quantidade
-|-- Data de Última Atualização
-|-- Localização do Estoque
+![Modelo de Domínio de Produtos](caminho/para/diagrama.png)
 
-Review
-|-- ID
-|-- Produto
-|-- Usuário
-|-- Classificação
-|-- Comentário
-|-- Data da Avaliação
+## Diagrama UML em PlantUML
+
+```plantuml
+@startuml
+class Produto {
+  +ID: String
+  +Nome: String
+  +Descrição: String
+  +Preço: Decimal
+  +DataCriação: Date
+  +Status: String
+}
+
+class Categoria {
+  +ID: String
+  +Nome: String
+  +Descrição: String
+}
+
+class Fornecedor {
+  +ID: String
+  +Nome: String
+  +Contato: String
+  +Endereço: String
+}
+
+class Estoque {
+  +Quantidade: Integer
+  +DataÚltimaAtualização: Date
+  +Localização: String
+}
+
+class Avaliação {
+  +ID: String
+  +Usuário: String
+  +Classificação: Integer
+  +Comentário: String
+  +DataAvaliação: Date
+}
+
+Produto "1" -- "1..*" Categoria : pertence a
+Produto "1" -- "1..*" Fornecedor : fornecido por
+Produto "1" -- "1" Estoque : possui
+Produto "1" -- "0..*" Avaliação : recebe
+
+@enduml
