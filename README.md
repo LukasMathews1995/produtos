@@ -9,9 +9,17 @@ O diagrama de entidades abaixo ilustra as principais tabelas do banco de dados, 
 
 Funcionalidades
 Gerenciamento de Produtos: Adicionar, editar, listar e excluir produtos.
+
+
 Gestão de Categorias: Produtos podem ser associados a uma ou mais categorias.
+
+
 Controle de Status: Defina o status dos produtos como "Ativo", "Inativo", entre outros.
+
+
 Data de Criação: Acompanhe a data de criação dos produtos no sistema.
+
+
 Preço: Armazene informações de preço para cada produto.
 
 
